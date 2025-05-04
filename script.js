@@ -1,10 +1,9 @@
 const svg = document.getElementById('timer-svg');
 const timeDisplay = document.getElementById('time-display');
-
 const totalSegments = 60;
 let countdownInterval = null;
 
-// Create 60 segments in a circular layout
+// Create 60 segments around a circle
 for (let i = 0; i < totalSegments; i++) {
   const angle = (360 / totalSegments) * i;
   const largeArc = 360 / totalSegments > 180 ? 1 : 0;
@@ -25,12 +24,10 @@ for (let i = 0; i < totalSegments; i++) {
 }
 
 function startTimer(minutes) {
-  clearInterval(countdownInterval); // Reset any existing timer
-
+  clearInterval(countdownInterval);
   let timeLeft = minutes * 60;
   updateTimeDisplay(timeLeft);
 
-  // Reset all segments to red
   document.querySelectorAll('.segment').forEach((seg, idx) => {
     seg.style.opacity = idx < minutes ? "1" : "0";
   });
@@ -45,12 +42,10 @@ function startTimer(minutes) {
     });
 
     if (timeLeft <= 0) {
-        clearInterval(countdownInterval);
-      
-        // Play the ding sound
-        const sound = document.getElementById("ding-sound");
-        sound.play();
-      }      
+      clearInterval(countdownInterval);
+      const sound = document.getElementById("ding-sound");
+      sound.play();
+    }
   }, 1000);
 }
 
@@ -59,15 +54,11 @@ function updateTimeDisplay(seconds) {
   const secs = String(seconds % 60).padStart(2, '0');
   timeDisplay.textContent = `${mins}:${secs}`;
 }
+
 document.getElementById('reset-btn').addEventListener('click', () => {
-    clearInterval(countdownInterval);
-  
-    // Reset display
-    updateTimeDisplay(0);
-  
-    // Reset all segment opacities
-    document.querySelectorAll('.segment').forEach(seg => {
-      seg.style.opacity = "1";
-    });
+  clearInterval(countdownInterval);
+  updateTimeDisplay(0);
+  document.querySelectorAll('.segment').forEach(seg => {
+    seg.style.opacity = "1";
   });
-  
+});

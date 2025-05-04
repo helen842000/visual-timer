@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Visual Timer</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="app">
-        <h1>Visual Timer</h1>
-      
-        <!-- Responsive SVG -->
-        <svg id="timer-svg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
-          <!-- Segments will be inserted here by JavaScript -->
-        </svg>
-      
-        <div id="time-display">00:00</div>
-        <button id="reset-btn">Reset</button>
-      </div>
-  <script src="script.js"></script>
-  <audio id="ding-sound" src="ding.wav" preload="auto"></audio>
+  <div id="app">
+    <h1>Visual Timer</h1>
 
+    <!-- Responsive SVG Clock Face -->
+    <svg id="timer-svg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+      <!-- Segments will be added here via JavaScript -->
+    </svg>
+
+    <div id="time-display">00:00</div>
+    <button id="reset-btn">Reset</button>
+    <audio id="ding-sound" src="ding.wav" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

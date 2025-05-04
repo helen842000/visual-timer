@@ -19,11 +19,11 @@ body {
     max-height: 90vw;
     display: block;
     margin: 1rem auto;
-    transform: rotate(-90deg); /* makes 0 degrees start at the top */
+    transform: rotate(-90deg);
   }
   
   .segment {
-    fill: rgb(200, 0, 255);
+    fill: purple;
     cursor: pointer;
     transition: opacity 0.3s;
   }
@@ -36,6 +36,7 @@ body {
     font-size: 2rem;
     margin-top: 1rem;
   }
+  
   #reset-btn {
     margin-top: 1rem;
     padding: 0.5rem 1.2rem;
@@ -47,9 +48,11 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
   }
+  
   #reset-btn:hover {
     background-color: #666;
   }
+  
   @media (max-width: 500px) {
     #time-display {
       font-size: 1.5rem;
@@ -61,4 +64,3 @@ body {
     }
   }
   
-    
