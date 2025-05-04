@@ -7,13 +7,19 @@ body {
   }
   
   #app {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
+    padding: 1rem;
   }
   
   svg {
-    margin-top: 1rem;
-    transform: rotate(-90deg); /* so the "start" is at the top */
+    width: 100%;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vw;
+    display: block;
+    margin: 1rem auto;
+    transform: rotate(-90deg); /* makes 0 degrees start at the top */
   }
   
   .segment {
@@ -41,8 +47,18 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  
   #reset-btn:hover {
     background-color: #666;
   }
+  @media (max-width: 500px) {
+    #time-display {
+      font-size: 1.5rem;
+    }
+  
+    #reset-btn {
+      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
+    }
+  }
+  
     
