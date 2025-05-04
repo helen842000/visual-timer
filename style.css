@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  #app {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  svg {
+    margin-top: 1rem;
+    transform: rotate(-90deg); /* so the "start" is at the top */
+  }
+  
+  .segment {
+    fill: rgb(200, 0, 255);
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .segment:hover {
+    opacity: 0.7;
+  }
+  
+  #time-display {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  #reset-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #reset-btn:hover {
+    background-color: #666;
+  }
+    

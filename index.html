@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visual Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Visual Timer</h1>
+    <svg id="timer-svg" width="300" height="300" viewBox="0 0 200 200">
+      <!-- Segments will be drawn here using JavaScript -->
+    </svg>
+    <div id="time-display">00:00</div>
+    <button id="reset-btn">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+  <audio id="ding-sound" src="ding.wav" preload="auto"></audio>
+
+</body>
+</html>
